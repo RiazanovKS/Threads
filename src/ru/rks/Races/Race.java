@@ -1,10 +1,12 @@
 package ru.rks.Races;
 
+/**
+ * Класс, демонстрирующий динамическое изменение приоритетов двух потоков.
+ */
 
 public class Race {
     final static int COUNT_OF_STEPS = 5000;
     static final int TIME_OF_SLEEP = 10;
-
     public static void main(String[] args) {
         Thread thread = Thread.currentThread();
         Racer racer = new Racer();
