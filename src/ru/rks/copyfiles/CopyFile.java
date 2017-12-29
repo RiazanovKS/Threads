@@ -4,18 +4,20 @@ import java.io.*;
 
 public class CopyFile extends Thread {
     private String wayToFileOutput;
+    private String wayToFileInput;
 
-    public CopyFile(String wayToFileOutput) {
+    public CopyFile(String wayToFileOutput,String wayToFileInput) {
         this.wayToFileOutput = wayToFileOutput;
+        this.wayToFileInput= wayToFileInput;
     }
 
     @Override
     public void run() {
         final long before=System.currentTimeMillis();
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(wayToFileOutput));
-             BufferedReader bufferedReader = new BufferedReader(new FileReader("D:\\Work\\Threads\\src\\ru\\rks\\copyfiles\\FileInput.txt"))) {
+             BufferedReader bufferedReader = new BufferedReader(new FileReader(wayToFileInput))) {
             String string;
-            while ((string = bufferedReader.readLine()) != null) {
+            while ((string = bufferedReader.readLine()) != null){
                 bufferedWriter.write(string+"\n");
             }
         } catch (IOException e) {
