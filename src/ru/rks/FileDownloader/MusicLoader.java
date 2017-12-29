@@ -7,6 +7,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+/**
+ * Класс для скачивания музыки
+ */
+
 public class MusicLoader {
     private static final String PATH_TO_MUSIC = "D:\\Work\\Threads\\src\\ru\\rks\\FileDownloader\\music\\music";
     private static final String OUT_FILE_TXT = "D:\\Work\\Threads\\src\\ru\\rks\\FileDownloader\\outFile.txt";

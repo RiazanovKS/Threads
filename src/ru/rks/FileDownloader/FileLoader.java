@@ -8,7 +8,7 @@ import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 
 /**
- * Поток качает музыку из указанной ссылки по указанному пути.
+ * Поток качает файл из указанной ссылки по указанному пути.
  */
 
 public class FileLoader extends Thread {
