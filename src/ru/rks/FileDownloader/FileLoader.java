@@ -1,4 +1,4 @@
-package ru.rks.downloadmusic;
+package ru.rks.FileDownloader;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -7,12 +7,17 @@ import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 
+/**
+ * Поток качает музыку из указанной ссылки по указанному пути.
+ */
+
 public class FileLoader extends Thread {
     private String strUrl;
     private String file;
 
     @Override
     public void run() {
+        final long before = System.currentTimeMillis();
         try {
             URL url = new URL(strUrl);
             try (ReadableByteChannel byteChannel = Channels.newChannel(url.openStream());
@@ -24,6 +29,8 @@ public class FileLoader extends Thread {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
+        final long after = System.currentTimeMillis();
+        System.out.println("time delta: "+ (after-before)+" ms");
     }
 
     FileLoader(String strUrl, String file) {
