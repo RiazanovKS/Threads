@@ -6,6 +6,8 @@ import java.io.IOException;
 
 /**
  * Класс многопоточно считывает данные из двух текстовых файлов и записывает в результирующий файл.
+ *
+ * @author Рязанов К.С.
  */
 public class Main {
     static final String WAY_TO_FILE_1 = "D:\\Work\\Threads\\src\\ru\\rks\\ReadAndWrite\\Document1.txt";
@@ -13,8 +15,8 @@ public class Main {
     static final String WAY_TO_FILE_OUTPUT = "D:\\Work\\Threads\\src\\ru\\rks\\ReadAndWrite\\Result.txt";
     public static void main(String[] args) throws InterruptedException {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(WAY_TO_FILE_OUTPUT))) {
-            ReaderAndWriter thread1 = new ReaderAndWriter(WAY_TO_FILE_1, bufferedWriter);
-            ReaderAndWriter thread2 = new ReaderAndWriter(WAY_TO_FILE_2, bufferedWriter);
+            ReaderAndWriter thread1 = new ReaderAndWriter(WAY_TO_FILE_1,WAY_TO_FILE_OUTPUT, bufferedWriter);
+            ReaderAndWriter thread2 = new ReaderAndWriter(WAY_TO_FILE_2,WAY_TO_FILE_OUTPUT, bufferedWriter);
             thread1.start();
             thread2.start();
             thread1.join();

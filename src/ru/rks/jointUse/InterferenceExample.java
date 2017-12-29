@@ -2,6 +2,8 @@ package ru.rks.jointUse;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+
+
 public class InterferenceExample {
     private static final int TWO_THOUSAND = 2000;
     private AtomicInteger counter = new AtomicInteger();

@@ -1,5 +1,10 @@
 package ru.rks.copyfiles;
 
+/**
+ * Класс осуществляет последовательное многопоточное копирование текствовых файлов.
+ *
+ * @author Рязанов К.С.
+ */
 public class SerialCopying {
     private static final String WAY_TO_FILE_OUT_1="D:\\Work\\Threads\\src\\ru\\rks\\copyfiles\\Document1.txt";
     private static final String WAY_TO_FILE_OUT_2="D:\\Work\\Threads\\src\\ru\\rks\\copyfiles\\Document2.txt";

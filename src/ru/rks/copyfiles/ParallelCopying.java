@@ -1,5 +1,10 @@
 package ru.rks.copyfiles;
 
+/**
+ * Класс осуществляет параллельное многопоточное копирование текстовых файлов.
+ *
+ * @author Рязанов К.С.
+ */
 public class ParallelCopying {
     private static final String WAY_TO_FILE_OUT_1="D:\\Work\\Threads\\src\\ru\\rks\\copyfiles\\Document1.txt";
     private static final String WAY_TO_FILE_OUT_2="D:\\Work\\Threads\\src\\ru\\rks\\copyfiles\\Document2.txt";

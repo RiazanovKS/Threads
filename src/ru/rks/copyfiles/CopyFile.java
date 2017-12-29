@@ -2,6 +2,12 @@ package ru.rks.copyfiles;
 
 import java.io.*;
 
+/**
+ * Класс копирует содержимое одного текстового файла в другой текстовый файл.
+ *
+ * @author Рязанов К.С.
+ */
+
 public class CopyFile extends Thread {
     private String wayToFileOutput;
     private String wayToFileInput;

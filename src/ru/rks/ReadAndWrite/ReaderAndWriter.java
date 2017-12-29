@@ -4,10 +4,13 @@ import java.io.*;
 
 /**
  * Поток считывает строки из текстового файла и записывает в результирующий файл.
+ *
+ * @author Рязанов К.С.
  */
 public class ReaderAndWriter extends Thread {
     private String wayToFileInput;
     private static volatile BufferedWriter bufferedWriter;
+    private String wayToFileOutput;
     public void run() {
         final long before = System.currentTimeMillis();
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(wayToFileInput))) {
@@ -23,8 +26,9 @@ public class ReaderAndWriter extends Thread {
         System.out.println("time delta : "+(after-before)+" ms");
     }
 
-    ReaderAndWriter(String wayToFile, BufferedWriter bufferedWriter) {
-        this.wayToFileInput = wayToFile;
+    ReaderAndWriter(String wayToFileInput,String wayToFileOutput, BufferedWriter bufferedWriter) {
+        this.wayToFileInput = wayToFileInput;
+        this.wayToFileOutput=wayToFileOutput;
         this.bufferedWriter = bufferedWriter;
     }
 }

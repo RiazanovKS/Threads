@@ -9,6 +9,8 @@ import java.util.stream.Collectors;
 
 /**
  * Класс для скачивания музыки
+ *
+ * @author Рязанов К.С.
  */
 
 public class MusicLoader {

@@ -7,6 +7,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+/**
+ * Класс для скачивания картинок
+ *
+ * @author Рязанов К.С.
+ */
 public class pictureLoader {
     private static final String PATH_TO_PICTURE = "D:\\Work\\Threads\\src\\ru\\rks\\FileDownloader\\pictures\\picture";
     private static final String OUT_FILE_TXT = "D:\\Work\\Threads\\src\\ru\\rks\\FileDownloader\\outFile.txt";

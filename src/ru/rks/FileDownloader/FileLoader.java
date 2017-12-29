@@ -9,6 +9,8 @@ import java.nio.channels.ReadableByteChannel;
 
 /**
  * Поток качает файл из указанной ссылки по указанному пути.
+ *
+ * @author Рязанов К.С.
  */
 
 public class FileLoader extends Thread {
