@@ -8,4 +8,5 @@
 <b>Проект, позволяющий параллельно считывать данные из двух разных текстовых файлов и записать в результирующий текстовый файл</b>
 <h3><a href ="https://github.com/RiazanovKS/Threads/tree/master/src/ru/rks/FileDownloader">Скачивание музыки и картинок</a></h3><br>
 <b>Проект скачивает файлы по указанным ссылкам</b><br>
-<h3><a href="https://github.com/RiazanovKS/Threads/tree/master/src/ru/rks/jointUse">Совместное использование ресурсов</a></h3>
+<h3><a href="https://github.com/RiazanovKS/Threads/tree/master/src/ru/rks/jointUse">Совместное использование ресурсов</a></h3><br>
+<b>В проекте создаются два потока, инкрементирующих переменную без потери данных</b>
