@@ -71,7 +71,7 @@ public class pictureLoader {
     private static void downloader(ArrayList<String> arrayList) {
         int count = 1;
         for (String downloadLink:arrayList) {
-            new FileLoader(downloadLink, PATH_TO_PICTURE + String.valueOf(count) + ".jpg").start();
+            new FileLoader(downloadLink, PATH_TO_PICTURE + String.valueOf(count) + ". jpg").start();
             System.out.println("Загрузка " + count + " файла началась");
             count++;
         }
